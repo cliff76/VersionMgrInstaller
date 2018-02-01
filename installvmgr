@@ -1,0 +1,30 @@
+#!/bin/sh
+
+while true; do
+
+	echo "1. Install nvm"
+	echo "2. Install rvm"
+	echo "3. Install sdkman"
+	echo "0. quit"
+
+	read -p "Select: " response
+	case $response in
+	0)
+		exit
+	;;
+	1)
+		echo "installing nvm"
+		curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+	;;
+	2)
+		echo "installing rvm"
+		curl -sSL https://get.rvm.io | bash -s stable --ruby
+	;;
+	3)
+		echo "installing sdkman"
+		curl -s "https://get.sdkman.io" | bash
+		echo "Now open a new terminal or enter:"
+		echo "source \"$HOME/.sdkman/bin/sdkman-init.sh\""
+	;;
+	esac
+done
