@@ -7,7 +7,7 @@ while true; do
 	echo "3. Install sdkman"
 	echo "0. quit"
 
-	read -p "Select: " response
+	read -p "Select: " response </dev/tty
 	case $response in
 	0)
 		exit
