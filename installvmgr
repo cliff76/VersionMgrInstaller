@@ -30,6 +30,11 @@ while true; do
 	4)
 		echo "installing pyenv"
 		curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+		cat << EOF >> $HOME/.bash_profile
+		export PATH="/Users/c.craig/.pyenv/bin:$PATH"
+		eval "$(pyenv init -)"
+		eval "$(pyenv virtualenv-init -)"
+EOF
 	;;
 	esac
 done
