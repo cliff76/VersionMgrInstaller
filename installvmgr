@@ -5,6 +5,7 @@ while true; do
 	echo "1. Install nvm"
 	echo "2. Install rvm"
 	echo "3. Install sdkman"
+	echo "4. Install pyenv"
 	echo "0. quit"
 
 	read -p "Select: " response </dev/tty
@@ -25,6 +26,10 @@ while true; do
 		curl -s "https://get.sdkman.io" | bash
 		echo "Now open a new terminal or enter:"
 		echo "source \"$HOME/.sdkman/bin/sdkman-init.sh\""
+	;;
+	4)
+		echo "installing pyenv"
+		curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
 	;;
 	esac
 done
