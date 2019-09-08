@@ -3,7 +3,7 @@
 while true; do
 
 	echo "1. Install nvm"
-	echo "2. Install rvm"
+	echo "2. Install HOMEBREW and rvm"
 	echo "3. Install sdkman"
 	echo "4. Install pyenv"
 	echo "0. quit"
@@ -18,6 +18,8 @@ while true; do
 		curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 	;;
 	2)
+		echo "installing Homebrew"
+		/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 		echo "installing rvm"
 		curl -sSL https://get.rvm.io | bash -s stable --ruby
 	;;
